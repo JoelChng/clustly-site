@@ -1,0 +1,21 @@
+/* Static replica helpers: FAQ accordion and mobile nav (no React). */
+.faq-item > summary { list-style: none; }
+.faq-item > summary::-webkit-details-marker { display: none; }
+.faq-item .faq-icon::before { content: "+"; }
+.faq-item[open] .faq-icon::before { content: "−"; }
+.faq-item .faq-icon {
+  background: #FAF7F5;
+  color: #1A1614;
+}
+.faq-item[open] .faq-icon {
+  background: linear-gradient(to bottom right, #FF4438, #D8281C);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255,68,56,0.3);
+}
+.faq-item[open] {
+  border-color: rgba(26,22,20,0.12) !important;
+  box-shadow: var(--shadow-v4-soft);
+}
+.mobile-nav > summary { list-style: none; }
+.mobile-nav > summary::-webkit-details-marker { display: none; }
+.mobile-nav[open] > summary { background: #FAF7F5; }
